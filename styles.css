@@ -1,2 +1,18 @@
 /*hex color palette*/
 /*hex color picker*/
+body {
+  background-color: #def3f7;
+
+}
+
+header {
+
+  
+}
+p {
+  font-size:
+
+}
+header, nav, main {
+  border: 5px solid red;
+}

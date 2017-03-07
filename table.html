@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="table.css"/>
+</head>
+<body>
+<div class="table">
+    <table >
+      <tr><th colspan="10">HOURS</th></tr>
+    <tbody id= "storetable">
+    </tbody>
+    </table>
+</div>
+<script type="text/javascript" src="table.js"></script>
+  <form id="SubmitFreshStores" name="SubmitFreshStores">
+    <fieldset>
+      <legend>Submit Fresh Stores</legend>
+      <label>New Store Name:</br />
+      <input type="text" id="storeName" name="storeName" placeholder="Enter City Here"></label><br />
+      <label>Min Number of Customers:<br />
+      <input type="number" id="numberCustomerMin" name="numberCustomerMin" min="1" max="150"></label><br />
+      <label>Max Number of Customers:<br />
+      <input type="number" id="numberCustomerMax" name="numberCustomerMax" min="1" max="150"></label><br />
+      <label>Average Number of Customers:<br />
+      <input type="number" id="averageNumberCustomer" name="averageNumberCustomer" min="1" max="150"></label><br />
+      <input type="submit" onclick="addStores()" value="Generate" />
+    </fieldset>
+  </form>
+
+
+</body>
+</html>
