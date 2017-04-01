@@ -18,7 +18,6 @@ var sellwoodThestores = new Thestores (20, 48, 3.3, "sellwood", "Sellwood");
 var pearlThestores = new Thestores (3, 24, 2.6, "pdistrict", "Pearl District");
 
 var stores = new Array ();
-var tableHeaderRow = "<tr><th>name</th><th></th><th></th></tr>";
 stores.push(pioneerThestores);
 stores.push(airportThestores);
 stores.push(squareThestores);
@@ -51,6 +50,8 @@ function writeStoreData (store) {
 }
 
 function buildStorePage () {
+  var container = document.getElementById("storetable");
+  container.innerHTML = "";
   for (index = 0; index < stores.length; index++) {
     writeStoreData(stores[index])
   }
@@ -60,22 +61,11 @@ buildStorePage();
 function addStores() {
     var form = document.getElementById("SubmitFreshStores");
     var name = form.storeName.value;
-    var min = form.numberCustomerMin.value;
-    var max = form.numberCustomerMax.value;
-    var average = form.averageNumberCustomer.value;
-      /*alert("form.storename.value" + "form.numbercustomermin.value" + "form.numbercustomermax.value");
-      alert(form.storename.value);
-      alert(form.numbercustomermin.value);
-      alert(form.numbercustomermax.value);
+    var min = parseInt(form.numberCustomerMin.value);
+    var max = parseInt(form.numberCustomerMax.value);
+    var average = parseFloat(form.averageNumberCustomer.value);
+    var newStore = new Thestores(min, max, average, "", name);
 
-    var cookies = store.cookieCal();
-    rowdata += "<td>" + writeStoreHours(t)+ cookies + "</td>";
-    totalCookies += cookies;
-    container.innerHTML += rowdata + "<td>Total: " + totalCookies + "</td></tr>" ;
-    */
-  //  writeStoreData (store);
-    stores.push(pioneerThestores);
+    stores.push(newStore);
     buildStorePage();
 }
-//var name = form.elements[""];
-//alert(name.value);
