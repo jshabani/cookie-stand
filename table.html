@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link type="text/css" rel="stylesheet" href="table.css"/>
+</head>
+<body>
+  <div id="header">
+    <header><h1>Fresh Store Company</h1></header>
+  </div>
+  <div class= "cookiepicture"><img src="img/headpic.jpg"></div>
+  <div class="table">
+    <table >
+      <tr><th colspan="10">HOURS</th></tr>
+      <tbody id= "storetable">
+      </tbody>
+    </table>
+  </div>
+  <script type="text/javascript" src="table.js"></script>
+  <div id="instruction"><h2>Add New Fresh Stores Below:</h2></div>
+  <div class="instructionstore"><p>You can Enter new stores below. To do so, just put the min, max and average customers per hour that come in,
+    and 'voila' you will have a new store showing in the table. The random number engine will make projection of customers coming in every by just pushing the generate button.
+  </p>
+</div>
+<div id="formbox">
+  <form id="SubmitFreshStores" name="SubmitFreshStores">
+    <fieldset>
+      <legend>Submit Fresh Stores</legend>
+      <label>New Store Name:</label></br />
+      <input type="text" id="storeName" class="pickChoice" name="storeName" placeholder="Enter City Here" ><br />
+      <label>Min Number of Customers:</label><br />
+      <input type="number" id="numberCustomerMin" class="pickChoice" name="numberCustomerMin" min="1" max="150" ><br />
+      <label>Max Number of Customers:</label><br />
+      <input type="number" id="numberCustomerMax" class="pickChoice" name="numberCustomerMax" min="1" max="150" ><br />
+      <label>Average Number of Customers:</label><br />
+      <input type="number" id="averageNumberCustomer" class="pickChoice" name="averageNumberCustomer" min="1" max="150" ><br /><br />
+      <input id="submitButton" type="button" onclick="addStores()" value="Generate" />
+    </fieldset>
+  </form>
+  <div id="storepick"><img src="img/storefront.jpg"></div>
+</div>
+<div id="loremform" class="instructionstore">
+  <div id="loremtitle"><h3>Lorem Ipsum:</h3></div>
+  <p>Helvetica tacos portland affogato lomo deep v venmo hexagon.
+    Vaporware blog succulents, raclette kale chips mixtape salvia thundercats.
+    Pour-over man braid taxidermy brooklyn, fam ethical plaid selfies blog.
+    Gastropub meditation messenger bag, keffiyeh chambray freegan fashion axe glossier truffaut letterpress jianbing fam vinyl vegan pork belly.
+    Raw denim aesthetic ethical health goth, before they sold out lumbersexual disrupt blog cold-pressed fashion axe mlkshk heirloom.
+    Live-edge art party small batch chambray retro next level. Pork belly prism kogi, schlitz selfies irony man bun freegan skateboard humblebrag jianbing.
+  </p>
+</div>
+<div id="footer"><footer>© Copyright 2017 Fresh Cookies Corporation. All Rights Reserved</footer></div>
+
+</body>
+</html>
